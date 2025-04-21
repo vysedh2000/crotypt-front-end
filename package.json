@@ -9,23 +9,38 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.0",
+    "@tailwindcss/oxide": "^4.1.4",
     "@tanstack/react-router": "^1.114.3",
+    "animate.css": "^4.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "crypto-js": "^4.2.0",
+    "cryptojs": "^2.5.3",
     "front-end": "file:",
+    "init": "^0.1.2",
+    "lightningcss": "^1.29.3",
     "limiter": "^3.0.0",
+    "lucide-react": "^0.501.0",
     "next": "15.2.1",
     "next-intl": "^4.0.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.2.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/crypto-js": "^4.2.2",
     "@types/node": "^20.17.30",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
-    "tailwindcss": "^4",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4",
     "typescript": "^5.8.3"
   }
 }

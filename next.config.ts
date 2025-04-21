@@ -10,6 +10,8 @@ const nextConfig = {
     ENCRYPTION_ALGORITHM: process.env.ENCRYPTION_ALGORITHM,
     ENCRYPTION_KEY: process.env.ENCRYPTION_KEY,
     ENCRYPTION_IV_LENGTH: process.env.ENCRYPTION_IV_LENGTH,
+    SECRET_KEY: process.env.SECRET_KEY,
+    ENCRYPTION_KEY1: process.env.ENCRYPTION_KEY1
   },
 };
 
