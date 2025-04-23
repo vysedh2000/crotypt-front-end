@@ -1,6 +1,20 @@
 {
-  "Homepage": {
-    "title": "Welcome",
-    "content": "test"
-  }
+	"Homepage": {
+		"title": "Welcome",
+		"content": "test",
+		"landing": "Invest in your future",
+		"desc": "Join the millions of people who are already \n using our platform to invest in their future.",
+		"placeholder": "youremail@mail.com",
+		"button": "Sign up",
+		"info": "Best crypto platform on earth"
+	},
+	"NavBar": {
+		"explore": "Explore",
+		"pricing": "Pricing",
+		"whyus": "Why us?",
+		"learn": "Learn",
+		"support": "Support",
+		"login": "Login",
+		"signup": "Sign up"
+	}
 }

@@ -1,0 +1,20 @@
+{
+	"Homepage": {
+		"title": "Welkom",
+		"content": "test",
+		"landing": "Investeer in je toekomst",
+		"desc": "Sluit je aan bij de miljoenen mensen die al \n gebruik maken van ons platform om in hun toekomst te investeren.",
+		"placeholder": "jouwemail@mail.com",
+		"button": "Aanmelden",
+		"info": "Beste cryptoplatform ter wereld"
+	},
+	"NavBar": {
+		"explore": "Ontdekken",
+		"pricing": "Prijzen",
+		"whyus": "Waarom wij?",
+		"learn": "Leren",
+		"support": "Ondersteuning",
+		"login": "Inloggen",
+		"signup": "Registreren"
+	}
+}

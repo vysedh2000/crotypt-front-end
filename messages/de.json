@@ -1,6 +1,20 @@
 {
-  "Homepage": {
-    "title": "Wilkommen",
-    "content": "testen"
-  }
+	"Homepage": {
+		"title": "Wilkommen",
+		"content": "testen",
+		"landing": "Investieren Sie in Ihre Zukunft",
+		"desc": "Schließen Sie sich den Millionen von Menschen an, \n die unsere Plattform bereits nutzen, um in ihre Zukunft zu investieren.",
+		"placeholder": "deineemail@email.com.de",
+		"button": "Anmelden",
+		"info": "Beste Krypto-Plattform der Welt"
+	},
+	"NavBar": {
+		"explore": "Erkunden",
+		"pricing": "Preise",
+		"whyus": "Warum wir?",
+		"learn": "Lernen",
+		"support": "Unterstützung",
+		"login": "Anmelden",
+		"signup": "Anmelden"
+	}
 }
