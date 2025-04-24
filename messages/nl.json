@@ -6,7 +6,11 @@
 		"desc": "Sluit je aan bij de miljoenen mensen die al \n gebruik maken van ons platform om in hun toekomst te investeren.",
 		"placeholder": "jouwemail@mail.com",
 		"button": "Aanmelden",
-		"info": "Beste cryptoplatform ter wereld"
+		"info": "Beste cryptoplatform ter wereld",
+		"trust": "Vertrouwd door miljoenen apen",
+		"client": "Klanten",
+		"country": "Landen",
+		"querter": "Kwartaal handelsvolume"
 	},
 	"NavBar": {
 		"explore": "Ontdekken",

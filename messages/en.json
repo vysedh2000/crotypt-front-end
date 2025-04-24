@@ -6,7 +6,16 @@
 		"desc": "Join the millions of people who are already \n using our platform to invest in their future.",
 		"placeholder": "youremail@mail.com",
 		"button": "Sign up",
-		"info": "Best crypto platform on earth"
+		"info": "Best crypto platform on earth",
+		"trust": "Trust by millions of monkeys",
+		"client": "Clients",
+		"country": "Countries",
+		"querter": "Querterly trading volume",
+		"platform": "Crypto platform",
+		"buyminute": "Buy crypto in minutes",
+		"create": "Create your free Crotypt account",
+		"connect": "Connect your funding method",
+		"bns": "Buy and sell more than 200 cryotocurrencies"
 	},
 	"NavBar": {
 		"explore": "Explore",

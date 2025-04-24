@@ -30,20 +30,21 @@ const TopLanding = () => {
 							placeholder={t("placeholder")}
 							className="border-1 bg-white border-gray-400 w-[380px] h-[45px] placeholder:text-lg text-lg"
 						/>
-						<Button className="h-[45px] w-[80px] bg-blue-500 border-blue-300 border-1 text-white hover:bg-blue-600">
+						<Button className="h-[45px] w-[90px] bg-blue-500 rounded-xl border-blue-300 border-1 text-white hover:bg-blue-600">
 							{t("button")}
 						</Button>
 					</div>
 					<div>
 						<p className="font-bold text-2xl">CTN</p>
-						<p className="text-lg">{t("info")}</p>
+						<p className="text-sm text-gray-500">{t("info")}</p>
 						<Image
+							className="mt-10"
 							src={
 								"https://i.ibb.co/LdkkZQg2/Screenshot-2025-04-23-at-10-48-02-at-night.png"
 							}
 							alt=""
-							width={100}
-							height={100}></Image>
+							width={80}
+							height={80}></Image>
 					</div>
 				</div>
 			</div>

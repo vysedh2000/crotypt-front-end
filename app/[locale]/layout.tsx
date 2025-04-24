@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/app/[locale]/globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
 
 const inter = Inter({
 	weight: ["400", "500", "600", "700"],
@@ -17,18 +19,25 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
 	children,
+	params,
 }: Readonly<{
 	children: React.ReactNode;
+	params: Promise<{ locale: string }>;
 }>) {
+	const { locale } = await params;
+	if (!routing.locales.includes(locale as never)) {
+		notFound();
+	}
 	const messages = await getMessages();
+	setRequestLocale(locale);
 
 	return (
-		<NextIntlClientProvider messages={messages}>
-			<html lang="en">
-				<body className={`${inter.variable} antialiased m-[0px] p-0`}>
+		<html lang={locale}>
+			<body className={`${inter.variable} antialiased m-[0px] p-0`}>
+				<NextIntlClientProvider messages={messages}>
 					{children}
-				</body>
-			</html>
-		</NextIntlClientProvider>
+				</NextIntlClientProvider>
+			</body>
+		</html>
 	);
 }
