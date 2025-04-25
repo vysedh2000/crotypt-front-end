@@ -25,5 +25,13 @@
 		"support": "Support",
 		"login": "Login",
 		"signup": "Sign up"
+	},
+	"Auth": {
+		"login": "Login",
+		"signup": "Create account",
+		"logintitle": "Sign in to Crotypt",
+		"continue": "Continue",
+		"cantsign": "Can't sign in?",
+		"us": "us"
 	}
 }
