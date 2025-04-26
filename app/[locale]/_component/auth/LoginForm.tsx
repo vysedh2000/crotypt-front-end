@@ -1,4 +1,3 @@
-import { Input } from "@/components/ui/input";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { AnimatedInputName } from "./AnimatedInputName";
@@ -37,13 +36,15 @@ const LoginForm = () => {
 					<Button className="w-[450px] mt-5 h-[45px] text-[17px] font-bold bg-blue-500 hover:bg-blue-600 rounded-xl">
 						{t("continue")}
 					</Button>
-					<p className="text-[15px] mt-3 pl-2">
-						{t("cantsign")}{" "}
-						<Link className="text-blue-500" href={"#"}>
-							Email{" "}
-						</Link>
-						{t("us")}
-					</p>
+					<div className="flex items-center justify-center">
+						<p className="text-[15px] mt-3 pl-2">
+							{t("cantsign")}{" "}
+							<Link className="text-blue-500" href={"#"}>
+								Email{" "}
+							</Link>
+							{t("us")}
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
