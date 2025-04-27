@@ -32,8 +32,8 @@ const NavBar = () => {
 							{t("login")}
 						</Button>
 					</Link>
-					<Link href={"#"}>
-						<Button className="bg-white border-blue-400 border-1 text-black rounded-xl hover:bg-blue-100">
+					<Link href={"/signup"}>
+						<Button className="bg-blue-100 border-blue-400 border-0 text-blue-600 rounded-xl hover:bg-blue-200">
 							{t("signup")}
 						</Button>
 					</Link>

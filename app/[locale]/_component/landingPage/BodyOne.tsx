@@ -57,7 +57,7 @@ const BodyOne = () => {
 						<p>{t("bns")}</p>
 					</div>
 					<Link href={"#"}>
-						<Button className="mt-7 bg-blue-500 rounded-xl hover:bg-blue-600 h-[40px]">
+						<Button className="mt-7 bg-blue-500 rounded-xl border-0 hover:bg-blue-600 h-[40px]">
 							{t("button")}
 						</Button>
 					</Link>

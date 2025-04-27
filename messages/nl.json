@@ -1,24 +1,51 @@
 {
 	"Homepage": {
 		"title": "Welkom",
-		"content": "test",
+		"content": "Test",
 		"landing": "Investeer in je toekomst",
-		"desc": "Sluit je aan bij de miljoenen mensen die al \n gebruik maken van ons platform om in hun toekomst te investeren.",
-		"placeholder": "jouwemail@mail.com",
+		"desc": "Sluit je aan bij de miljoenen mensen die al gebruik maken van ons platform om in hun toekomst te investeren.",
+		"placeholder": "jouremail@mail.com",
 		"button": "Aanmelden",
-		"info": "Beste cryptoplatform ter wereld",
+		"info": "Beste crypto platform op aarde",
 		"trust": "Vertrouwd door miljoenen apen",
 		"client": "Klanten",
 		"country": "Landen",
-		"querter": "Kwartaal handelsvolume"
+		"querter": "Kwartaal handelsvolume",
+		"platform": "Crypto platform",
+		"buyminute": "Koop crypto in minuten",
+		"create": "Maak je gratis Crotypt account aan",
+		"connect": "Verbind je betaalmethode",
+		"bns": "Koop en verkoop meer dan 200 cryptocurrencies"
 	},
 	"NavBar": {
-		"explore": "Ontdekken",
+		"explore": "Verkennen",
 		"pricing": "Prijzen",
 		"whyus": "Waarom wij?",
 		"learn": "Leren",
-		"support": "Ondersteuning",
+		"support": "Support",
 		"login": "Inloggen",
-		"signup": "Registreren"
+		"signup": "Aanmelden"
+	},
+	"Auth": {
+		"login": "Inloggen",
+		"signup": "Maak een account aan",
+		"logintitle": "Meld je aan bij Crotypt",
+		"continue": "Doorgaan",
+		"sign": "Aanmelden",
+		"cantsign": "Kun je je niet aanmelden?",
+		"us": "ons",
+		"email": "E-mail",
+		"password": "Wachtwoord",
+		"errorEmail": "Voer een geldig e-mailadres in",
+		"errorPassword": "Het wachtwoord moet minimaal 1 hoofdletter, 1 cijfer, 1 speciaal teken en minimaal 8 tekens bevatten.",
+		"agree1": "Door door te gaan, ga ik akkoord met de",
+		"agree2": "Servicevoorwaarden",
+		"agree3": "en het",
+		"agree4": "Privacybeleid",
+		"agreeError": "Je moet akkoord gaan met de Servicevoorwaarden en het Privacybeleid",
+		"createAccount": "Maak een account aan",
+		"forgot": "Vergeten",
+		"username": "Gebruikersnaam",
+		"or": "of"
 	}
 }
