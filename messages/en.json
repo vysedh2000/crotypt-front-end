@@ -31,7 +31,21 @@
 		"signup": "Create account",
 		"logintitle": "Sign in to Crotypt",
 		"continue": "Continue",
+		"sign": "Sign Up",
 		"cantsign": "Can't sign in?",
-		"us": "us"
+		"us": "us",
+		"email": "Email",
+		"password": "Password",
+		"errorEmail": "Please enter a valid email address",
+		"errorPassword": "Password must contain at least 1 uppercase letter, 1 number, 1 special character and \nat least 8 characters.",
+		"agree1": "By continuing I agree to the",
+		"agree2": "Terms of Service",
+		"agree3": "and",
+		"agree4": "Privacy Policy",
+		"agreeError": "Please agree to the Terms of Service and Privacy Policy",
+		"createAccount": "Create an account",
+		"forgot": "Forgot",
+		"username": "Username",
+		"or": "or"
 	}
 }

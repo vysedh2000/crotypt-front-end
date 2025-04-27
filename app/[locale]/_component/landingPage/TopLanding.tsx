@@ -30,7 +30,7 @@ const TopLanding = () => {
 							placeholder={t("placeholder")}
 							className="border-1 bg-white border-gray-400 w-[380px] h-[45px] placeholder:text-lg text-lg"
 						/>
-						<Button className="h-[45px] w-[90px] bg-blue-500 rounded-xl border-blue-300 border-1 text-white hover:bg-blue-600">
+						<Button className="h-[45px] w-[90px] bg-blue-500 rounded-xl border-blue-300 border-0 text-white hover:bg-blue-600">
 							{t("button")}
 						</Button>
 					</div>

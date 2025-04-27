@@ -1,9 +1,8 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { AnimatedInputName } from "./AnimatedInputName";
-import { AnimatedInputPW } from "./AnimatedInputPW";
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
+import { AnimatedInput } from "./AnimatedInput";
 
 const LoginForm = () => {
 	const t = useTranslations("Auth");
@@ -20,16 +19,24 @@ const LoginForm = () => {
 				/>
 				<h1 className="font-bold text-2xl">{t("logintitle")}</h1>
 				<div className="space-y-1">
-					<AnimatedInputName />
-					<AnimatedInputPW />
+					<AnimatedInput
+						className="rounded-t-xl"
+						type="text"
+						placeholder={`${t("username")} ${t("or")} ${t("email")}`}
+					/>
+					<AnimatedInput
+						type="password"
+						className="rounded-b-xl"
+						placeholder={t("password")}
+					/>
 					<p className="text-[15px] mt-3 pl-2">
-						Forgot{" "}
+						{t("forgot")}{" "}
 						<Link className="text-blue-700" href={"#"}>
-							password
+							{t("password")}
 						</Link>{" "}
-						or{" "}
+						{t("or")}{" "}
 						<Link className="text-blue-700" href={"#"}>
-							username
+							{t("username")}
 						</Link>
 						?
 					</p>
