@@ -24,7 +24,10 @@
 		"learn": "Learn",
 		"support": "Support",
 		"login": "Login",
-		"signup": "Sign up"
+		"signup": "Sign up",
+		"profile": "Profile",
+		"settings": "Setting",
+		"logout": "Logout"
 	},
 	"Auth": {
 		"login": "Login",
@@ -37,6 +40,7 @@
 		"email": "Email",
 		"password": "Password",
 		"errorEmail": "Please enter a valid email address",
+		"errorUsername": "Username must be 5 or more characters",
 		"errorPassword": "Password must contain at least 1 uppercase letter, 1 number, 1 special character and \nat least 8 characters.",
 		"agree1": "By continuing I agree to the",
 		"agree2": "Terms of Service",
@@ -46,6 +50,8 @@
 		"createAccount": "Create an account",
 		"forgot": "Forgot",
 		"username": "Username",
-		"or": "or"
+		"or": "or",
+		"remember": "Remember me?",
+		"invalid": "Invalid Credential!"
 	}
 }

@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({
 	weight: ["400", "500", "600", "700"],
@@ -36,6 +37,7 @@ export default async function RootLayout({
 			<body className={`${inter.variable} antialiased m-[0px] p-0`}>
 				<NextIntlClientProvider messages={messages}>
 					{children}
+					<Toaster />
 				</NextIntlClientProvider>
 			</body>
 		</html>
