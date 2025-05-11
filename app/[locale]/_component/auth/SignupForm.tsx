@@ -6,6 +6,10 @@ import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Link } from "@/i18n/routing";
+import { signupAction } from "./_action/auth";
+import { defaultResponse } from "@/app/types/default.type";
+import { SUCCESS } from "@/app/constant/status";
+import { redirect } from "next/navigation";
 
 interface Country {
 	code: string;
@@ -15,40 +19,41 @@ interface Country {
 
 const SignupForm = () => {
 	const t = useTranslations("Auth");
-	const [country, setCountry] = useState<Country | null>(null);
+	const [cntryValue, setCntryValue] = useState<Country | null>(null);
+	const [country, setCountry] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const [username, setUsername] = useState("");
+	const [usernameError, setUsernameError] = useState("");
+	const [error, setError] = useState("");
 	const [emailError, setEmailError] = useState("");
 	const [passwordError, setPasswordError] = useState("");
 	const [agree, setAgree] = useState(false);
 	const [agreeError, setAgreeError] = useState("");
 
-	const handleSubmit = useCallback(
-		(e: React.FormEvent) => {
-			if (emailError === "" && passwordError === "") {
-				if (email && password) {
-					if (agree) {
-						console.log("allo", email, password);
-					} else {
-						setAgreeError(t("agreeError"));
-					}
-				}
+	const handleSubmit = async () => {
+		try {
+			let request = {
+				email: email,
+				username: username,
+				password: password,
+				country: country,
+			};
+			const data: defaultResponse = await signupAction(request);
+			if (data.status == SUCCESS) {
+				redirect("/login");
 			} else {
-				console.log("Error");
+				setError("Error creating account!");
 			}
-			e.preventDefault();
-		},
-		[email, password, agreeError, t]
-	);
+		} catch (e: any) {
+			setError(e.message);
+		}
+	};
 
-	const handleSelect = useCallback((country: Country) => {
-		setCountry(country);
-		console.log(
-			"Selected country:",
-			country.code,
-			country.commonName,
-			country.officialName
-		);
+	const handleSelect = useCallback((value: Country) => {
+		setCountry(value.commonName);
+		setCntryValue(value);
+		console.log(value.commonName);
 	}, []);
 
 	const handleEmailChange = useCallback((value: string) => {
@@ -57,6 +62,15 @@ const SignupForm = () => {
 			setEmailError(t("errorEmail"));
 		} else {
 			setEmailError("");
+		}
+	}, []);
+
+	const handleUsernameChange = useCallback((value: string) => {
+		setUsername(value);
+		if (value.length < 5) {
+			setUsernameError(t("errorUsername"));
+		} else {
+			setUsernameError("");
 		}
 	}, []);
 
@@ -92,6 +106,14 @@ const SignupForm = () => {
 					onChange={handleEmailChange}
 					error={emailError}
 				/>
+				<AnimatedInput
+					className="rounded-lg w-[550px]"
+					placeholder={t("username")}
+					type="text"
+					value={username}
+					onChange={handleUsernameChange}
+					error={usernameError}
+				/>
 				<div className="relative">
 					<AnimatedInput
 						className="rounded-lg w-[550px] pr-10" // Padding right for icon space
@@ -103,7 +125,7 @@ const SignupForm = () => {
 					/>
 				</div>
 				<SortedCountryDropdown
-					value={country?.code || ""}
+					value={cntryValue?.code || ""}
 					onChange={handleSelect}
 					showOfficialName
 					className="w-[550px]"
@@ -124,7 +146,6 @@ const SignupForm = () => {
 			</div>
 			{agreeError && (
 				<div className="relative mt-10">
-					{/* Arrow pointing upwards */}
 					<div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-0 h-0 border-l-[10px] border-r-[10px] border-b-[10px] border-transparent border-b-red-500"></div>
 
 					<p className="text-red-500 text-xs text-center max-w-[550px] mx-auto px-4 py-2 bg-red-100 rounded-md shadow-md">
