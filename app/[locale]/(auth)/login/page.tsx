@@ -1,6 +1,6 @@
-import AuthNavBar from "../../_component/auth/AuthNavBar";
-import { AuthLayout } from "../../_component/auth/layout";
-import LoginForm from "../../_component/auth/LoginForm";
+import AuthNavBar from "../../_components/auth/AuthNavBar";
+import { AuthLayout } from "../../_components/auth/layout";
+import LoginForm from "../../_components/auth/LoginForm";
 
 const Page = () => {
 	return (

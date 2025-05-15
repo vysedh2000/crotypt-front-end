@@ -6,8 +6,9 @@ import { useTranslations } from "next-intl";
 import { getToken } from "@/util/tokenUtil";
 import { useEffect, useState } from "react";
 import { decodeToken } from "@/app/types/auth.type";
+import { RiStockFill } from "react-icons/ri";
 import { decodejwt } from "@/util/jwtUtil";
-import { FaCompass, FaSearch } from "react-icons/fa";
+import { FaBtc } from "react-icons/fa";
 
 const NavBar = () => {
 	const t = useTranslations("NavBar");
@@ -55,7 +56,7 @@ const NavBar = () => {
 							onMouseEnter={handleExploreEnter}
 							onMouseLeave={handleExploreLeave}>
 							<Link
-								href={`#`}
+								href={`/explore`}
 								className="relative font-medium hover:text-blue-600 transition-colors duration-200
                   after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0
                   after:bg-blue-600 hover:after:w-full after:transition-all after:duration-300">
@@ -69,12 +70,12 @@ const NavBar = () => {
 									onMouseLeave={handleExploreLeave}>
 									<ul className="py-2 text-sm text-gray-700">
 										<li className="px-4 py-2 hover:bg-gray-100 flex items-center space-x-2 cursor-pointer">
-											<FaSearch className="text-gray-500" />
-											<Link href="/explore/search">Search</Link>
+											<FaBtc className="text-gray-500" />
+											<Link href="/explore/search">Crypto</Link>
 										</li>
 										<li className="px-4 py-2 hover:bg-gray-100 flex items-center space-x-2 cursor-pointer">
-											<FaCompass className="text-gray-500" />
-											<Link href="/explore/discover">Discover</Link>
+											<RiStockFill className="text-gray-500" />
+											<Link href="/explore/discover">Stock</Link>
 										</li>
 									</ul>
 								</div>

@@ -1,7 +1,7 @@
-import AuthNavBar from "../../_component/auth/AuthNavBar";
-import SortedCountryDropdown from "../../_component/auth/CountryDropdown";
-import { AuthLayout } from "../../_component/auth/layout";
-import SignupForm from "../../_component/auth/SignupForm";
+import AuthNavBar from "../../_components/auth/AuthNavBar";
+import SortedCountryDropdown from "../../_components/auth/CountryDropdown";
+import { AuthLayout } from "../../_components/auth/layout";
+import SignupForm from "../../_components/auth/SignupForm";
 interface Country {
 	code: string;
 	commonName: string;

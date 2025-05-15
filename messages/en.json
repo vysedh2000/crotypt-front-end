@@ -53,5 +53,12 @@
 		"or": "or",
 		"remember": "Remember me?",
 		"invalid": "Invalid Credential!"
+	},
+	"Explore": {
+		"cryptofoot": "Top Cryptocurrencies by Market Cap",
+		"name": "Name",
+		"price": "Price",
+		"volume": "Volume",
+		"marcap": "Market Cap"
 	}
 }
