@@ -46,6 +46,17 @@
 		"createAccount": "Erstelle ein Konto",
 		"forgot": "Vergessen",
 		"username": "Benutzername",
-		"or": "oder"
+		"or": "oder",
+		"remember": "Erinnere dich an mich?",
+		"invalid": "Ungültige Anmeldedaten!"
+	},
+	"Explore": {
+		"cryptofoot": "Top-Kryptowährungen nach Marktkapitalisierung",
+		"name": "Name",
+		"price": "Preis",
+		"volume": "Volumen",
+		"marcap": "Marktkapitalisierung",
+		"refresh": "Aktualisieren",
+		"viewAll": "Alle anzeigen"
 	}
 }

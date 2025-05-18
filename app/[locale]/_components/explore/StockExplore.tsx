@@ -21,60 +21,60 @@ import {
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 
-const cryptoData: Crypto[] = [
+const stockData: Stock[] = [
 	{
 		id: 1,
-		name: "Bitcoin",
-		price: 76127.87,
+		name: "Apple Inc.",
+		symbol: "AAPL",
+		price: 187.45,
 		ccy: "USD",
-		volume: 712828,
-		imageUrl: "https://i.ibb.co/W4kwxZx8/Bitcoin-svg.png",
-		symbol: "BTC",
-		change: 2.35,
+		volume: 55478912,
+		imageUrl: "https://i.ibb.co/3mHPY7j3/apple-600.png",
+		change: 1.28,
 	},
 	{
 		id: 2,
-		name: "Ethereum",
-		price: 3129.12,
+		name: "Microsoft Corp.",
+		symbol: "MSFT",
+		price: 415.32,
 		ccy: "USD",
-		volume: 933288,
-		imageUrl: "https://i.ibb.co/DfFM74Sw/51-T9i1l0-IYL.jpg",
-		symbol: "ETH",
-		change: -0.75,
+		volume: 25364782,
+		imageUrl: "https://i.ibb.co/Z6cTHF46/microsoft-600.png",
+		change: 0.95,
 	},
 	{
 		id: 3,
-		name: "Binance",
-		price: 585.34,
+		name: "Amazon.com Inc.",
+		symbol: "AMZN",
+		price: 178.25,
 		ccy: "USD",
-		volume: 456789,
-		imageUrl: "https://i.ibb.co/B21tjpFs/Binance-Coin-1.png",
-		symbol: "BNB",
-		change: 1.21,
+		volume: 31562489,
+		imageUrl: "https://i.ibb.co/C506BmhX/amazon-600.png",
+		change: -0.82,
 	},
 	{
 		id: 4,
-		name: "Cardano",
-		price: 0.58,
+		name: "Tesla Inc.",
+		symbol: "TSLA",
+		price: 245.87,
 		ccy: "USD",
-		volume: 1234567,
-		imageUrl: "https://i.ibb.co/Kzm5F1zq/logo.png",
-		symbol: "ADA",
-		change: -1.15,
+		volume: 67234517,
+		imageUrl: "https://i.ibb.co/27fXPmkz/tesla-600.png",
+		change: 2.75,
 	},
 	{
 		id: 5,
-		name: "Solana",
-		price: 145.23,
+		name: "NVIDIA Corp.",
+		symbol: "NVDA",
+		price: 924.15,
 		ccy: "USD",
-		volume: 891234,
-		imageUrl: "https://i.ibb.co/21Rz8pK2/Solana-logo.png",
-		symbol: "SOL",
-		change: 3.89,
+		volume: 42587163,
+		imageUrl: "https://i.ibb.co/FLzf09LP/nvidia-600.png",
+		change: 3.41,
 	},
 ];
 
-const CryptoSide = () => {
+const StockExplore = () => {
 	const t = useTranslations("Explore");
 	const countRef = useRef(1);
 	return (
@@ -84,19 +84,13 @@ const CryptoSide = () => {
 					<div className="rounded-lg bg-blue-500/10 p-2">
 						<Coins className="h-6 w-6 text-blue-500" />
 					</div>
-					<h2 className="text-2xl font-bold text-gray-900">Crypto Market</h2>
+					<h2 className="text-2xl font-bold text-gray-900">Stock Market</h2>
 				</div>
 				<div className="flex items-center gap-2">
 					<button className="flex items-center gap-2 rounded-full border border-blue-500/20 bg-white px-4 py-2 text-sm font-semibold text-blue-500 transition-all hover:border-blue-500/40 hover:bg-blue-50">
 						<RefreshCw className="h-4 w-4" />
 						{t("refresh") || "Refresh"}
 					</button>
-					<Link href={"/explore/crypto"}>
-						<button className="flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-400 to-blue-600 px-4 py-2 text-sm font-semibold text-white transition-all hover:from-blue-600 hover:to-blue-700">
-							<LineChart className="h-4 w-4" />
-							{t("viewAll") || "View All"}
-						</button>
-					</Link>
 				</div>
 			</div>
 
@@ -125,7 +119,7 @@ const CryptoSide = () => {
 						</TableRow>
 					</TableHeader>
 					<TableBody>
-						{cryptoData.map(item => (
+						{stockData.map(item => (
 							<TableRow
 								key={item.id}
 								className="border-b-0 transition-colors hover:bg-blue-50/50">
@@ -189,4 +183,4 @@ const CryptoSide = () => {
 	);
 };
 
-export default CryptoSide;
+export default StockExplore;

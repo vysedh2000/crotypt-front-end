@@ -59,6 +59,13 @@
 		"name": "Name",
 		"price": "Price",
 		"volume": "Volume",
-		"marcap": "Market Cap"
+		"marcap": "Market Cap",
+		"refresh": "Refresh",
+		"viewAll": "View All",
+		"home": "Home",
+		"explore": "Explore",
+		"wallet": "Wallet",
+		"transfer": "Transfer",
+		"transaction": "Transaction"
 	}
 }

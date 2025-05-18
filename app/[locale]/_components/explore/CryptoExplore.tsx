@@ -72,9 +72,19 @@ const cryptoData: Crypto[] = [
 		symbol: "SOL",
 		change: 3.89,
 	},
+	{
+		id: 6,
+		name: "Litecoin",
+		price: 45.23,
+		ccy: "USD",
+		volume: 1812734,
+		imageUrl: "https://i.ibb.co/21Rz8pK2/Solana-logo.png",
+		symbol: "LTC",
+		change: 3.89,
+	},
 ];
 
-const CryptoSide = () => {
+const CryptoExplore = () => {
 	const t = useTranslations("Explore");
 	const countRef = useRef(1);
 	return (
@@ -91,12 +101,6 @@ const CryptoSide = () => {
 						<RefreshCw className="h-4 w-4" />
 						{t("refresh") || "Refresh"}
 					</button>
-					<Link href={"/explore/crypto"}>
-						<button className="flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-400 to-blue-600 px-4 py-2 text-sm font-semibold text-white transition-all hover:from-blue-600 hover:to-blue-700">
-							<LineChart className="h-4 w-4" />
-							{t("viewAll") || "View All"}
-						</button>
-					</Link>
 				</div>
 			</div>
 
@@ -189,4 +193,4 @@ const CryptoSide = () => {
 	);
 };
 
-export default CryptoSide;
+export default CryptoExplore;

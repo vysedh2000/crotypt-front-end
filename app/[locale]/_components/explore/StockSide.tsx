@@ -8,93 +8,92 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
-import { Link } from "@/i18n/routing";
 import { formatMoney } from "@/lib/utils";
-import { Crypto, CryptoPriceHis } from "@/types/crypto.type";
-import {
-	ArrowDownRight,
-	ArrowUpRight,
-	Coins,
-	LineChart,
-	RefreshCw,
-} from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useRef } from "react";
+import {
+	ArrowUpRight,
+	ArrowDownRight,
+	BarChart3,
+	RefreshCw,
+	TrendingUp,
+} from "lucide-react";
+import { Link } from "@/i18n/routing";
 
-const cryptoData: Crypto[] = [
+const stockData: Stock[] = [
 	{
 		id: 1,
-		name: "Bitcoin",
-		price: 76127.87,
+		name: "Apple Inc.",
+		symbol: "AAPL",
+		price: 187.45,
 		ccy: "USD",
-		volume: 712828,
-		imageUrl: "https://i.ibb.co/W4kwxZx8/Bitcoin-svg.png",
-		symbol: "BTC",
-		change: 2.35,
+		volume: 55478912,
+		imageUrl: "https://i.ibb.co/3mHPY7j3/apple-600.png",
+		change: 1.28,
 	},
 	{
 		id: 2,
-		name: "Ethereum",
-		price: 3129.12,
+		name: "Microsoft Corp.",
+		symbol: "MSFT",
+		price: 415.32,
 		ccy: "USD",
-		volume: 933288,
-		imageUrl: "https://i.ibb.co/DfFM74Sw/51-T9i1l0-IYL.jpg",
-		symbol: "ETH",
-		change: -0.75,
+		volume: 25364782,
+		imageUrl: "https://i.ibb.co/Z6cTHF46/microsoft-600.png",
+		change: 0.95,
 	},
 	{
 		id: 3,
-		name: "Binance",
-		price: 585.34,
+		name: "Amazon.com Inc.",
+		symbol: "AMZN",
+		price: 178.25,
 		ccy: "USD",
-		volume: 456789,
-		imageUrl: "https://i.ibb.co/B21tjpFs/Binance-Coin-1.png",
-		symbol: "BNB",
-		change: 1.21,
+		volume: 31562489,
+		imageUrl: "https://i.ibb.co/C506BmhX/amazon-600.png",
+		change: -0.82,
 	},
 	{
 		id: 4,
-		name: "Cardano",
-		price: 0.58,
+		name: "Tesla Inc.",
+		symbol: "TSLA",
+		price: 245.87,
 		ccy: "USD",
-		volume: 1234567,
-		imageUrl: "https://i.ibb.co/Kzm5F1zq/logo.png",
-		symbol: "ADA",
-		change: -1.15,
+		volume: 67234517,
+		imageUrl: "https://i.ibb.co/27fXPmkz/tesla-600.png",
+		change: 2.75,
 	},
 	{
 		id: 5,
-		name: "Solana",
-		price: 145.23,
+		name: "NVIDIA Corp.",
+		symbol: "NVDA",
+		price: 924.15,
 		ccy: "USD",
-		volume: 891234,
-		imageUrl: "https://i.ibb.co/21Rz8pK2/Solana-logo.png",
-		symbol: "SOL",
-		change: 3.89,
+		volume: 42587163,
+		imageUrl: "https://i.ibb.co/FLzf09LP/nvidia-600.png",
+		change: 3.41,
 	},
 ];
-
-const CryptoSide = () => {
+const StockSide = () => {
 	const t = useTranslations("Explore");
-	const countRef = useRef(1);
+
 	return (
 		<div className="rounded-xl bg-white shadow-2xl transition-all hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
 			<div className="mb-4 flex items-center justify-between px-6 pt-6">
 				<div className="flex items-center gap-3">
 					<div className="rounded-lg bg-blue-500/10 p-2">
-						<Coins className="h-6 w-6 text-blue-500" />
+						<TrendingUp className="h-6 w-6 text-blue-500" />
 					</div>
-					<h2 className="text-2xl font-bold text-gray-900">Crypto Market</h2>
+					<Link href={"/explore/stock"}>
+						<h2 className="text-2xl font-bold text-gray-900">Stock Market</h2>
+					</Link>
 				</div>
 				<div className="flex items-center gap-2">
 					<button className="flex items-center gap-2 rounded-full border border-blue-500/20 bg-white px-4 py-2 text-sm font-semibold text-blue-500 transition-all hover:border-blue-500/40 hover:bg-blue-50">
 						<RefreshCw className="h-4 w-4" />
-						{t("refresh") || "Refresh"}
+						{t("refresh")}
 					</button>
-					<Link href={"/explore/crypto"}>
+					<Link href={"/explore/stock"}>
 						<button className="flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-400 to-blue-600 px-4 py-2 text-sm font-semibold text-white transition-all hover:from-blue-600 hover:to-blue-700">
-							<LineChart className="h-4 w-4" />
-							{t("viewAll") || "View All"}
+							<BarChart3 className="h-4 w-4" />
+							{t("viewAll")}
 						</button>
 					</Link>
 				</div>
@@ -102,30 +101,33 @@ const CryptoSide = () => {
 
 			<div className="px-6 pb-6">
 				<Table className="min-w-[650px]">
+					<TableCaption className="mb-4 text-left text-sm text-gray-500">
+						Real-time stock market data updated every 15 seconds
+					</TableCaption>
 					<TableHeader className="bg-gradient-to-r from-blue-500 to-blue-600">
 						<TableRow className="hover:bg-transparent">
 							<TableHead className="rounded-tl-xl font-bold uppercase text-white">
 								#
 							</TableHead>
 							<TableHead className="font-bold uppercase text-white">
-								{t("name") || "Name"}
+								Company
 							</TableHead>
 							<TableHead className="font-bold uppercase text-white">
-								{t("price") || "Price"}
+								Price
 							</TableHead>
 							<TableHead className="font-bold uppercase text-white">
-								24h %
+								24h Change
 							</TableHead>
 							<TableHead className="font-bold uppercase text-white">
-								{t("volume") || "Volume"}
+								Volume
 							</TableHead>
 							<TableHead className="rounded-tr-xl text-right font-bold uppercase text-white">
-								{t("marcap") || "Market Cap"}
+								Market Cap
 							</TableHead>
 						</TableRow>
 					</TableHeader>
 					<TableBody>
-						{cryptoData.map(item => (
+						{stockData.map(item => (
 							<TableRow
 								key={item.id}
 								className="border-b-0 transition-colors hover:bg-blue-50/50">
@@ -137,12 +139,8 @@ const CryptoSide = () => {
 										<div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-100 bg-white">
 											<img
 												src={item.imageUrl}
-												alt={item.name}
-												className="h-6 w-6 rounded-full object-cover"
-												onError={e => {
-													(e.target as HTMLImageElement).src =
-														"/fallback-crypto.png";
-												}}
+												alt=""
+												className="h-6 w-6 rounded-full"
 											/>
 										</div>
 										<div>
@@ -180,13 +178,10 @@ const CryptoSide = () => {
 							</TableRow>
 						))}
 					</TableBody>
-					<TableCaption className="mb-4 text-left text-sm text-gray-500">
-						{t("cryptofoot") || "Live cryptocurrency prices and market data"}
-					</TableCaption>
 				</Table>
 			</div>
 		</div>
 	);
 };
 
-export default CryptoSide;
+export default StockSide;

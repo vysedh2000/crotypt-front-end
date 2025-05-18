@@ -46,6 +46,17 @@
 		"createAccount": "Maak een account aan",
 		"forgot": "Vergeten",
 		"username": "Gebruikersnaam",
-		"or": "of"
+		"or": "of",
+		"remember": "Onthoud mij?",
+		"invalid": "Ongeldige inloggegevens!"
+	},
+	"Explore": {
+		"cryptofoot": "Topcryptocurrencies op marktkapitalisatie",
+		"name": "Naam",
+		"price": "Prijs",
+		"volume": "Volume",
+		"marcap": "Marktkapitalisatie",
+		"refresh": "Vernieuwen",
+		"viewAll": "Alles bekijken"
 	}
 }

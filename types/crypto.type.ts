@@ -1,4 +1,5 @@
 export interface Crypto {
+	change: number;
 	id: number;
 	name: string;
 	price: number;

@@ -8,12 +8,14 @@ const AuthNavBar = ({ atLogin }: { atLogin: boolean }) => {
 	return (
 		<div className="bg-gray-100 w-full h-[60px] justify-between flex items-center">
 			<div className="pl-10">
-				<Image
-					src={"https://i.ibb.co/TxmH6YPG/images.png"}
-					alt=""
-					width={50}
-					height={50}
-				/>
+				<Link href={"/"}>
+					<Image
+						src={"https://i.ibb.co/TxmH6YPG/images.png"}
+						alt=""
+						width={50}
+						height={50}
+					/>
+				</Link>
 			</div>
 			<div className="mr-10">
 				{atLogin ? (
