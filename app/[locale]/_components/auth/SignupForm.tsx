@@ -10,6 +10,7 @@ import { signupAction } from "./_action/auth";
 import { defaultResponse } from "@/app/types/default.type";
 import { SUCCESS } from "@/app/constant/status";
 import { redirect } from "next/navigation";
+import { toast } from "sonner";
 
 interface Country {
 	code: string;
@@ -25,7 +26,6 @@ const SignupForm = () => {
 	const [password, setPassword] = useState("");
 	const [username, setUsername] = useState("");
 	const [usernameError, setUsernameError] = useState("");
-	const [error, setError] = useState("");
 	const [emailError, setEmailError] = useState("");
 	const [passwordError, setPasswordError] = useState("");
 	const [agree, setAgree] = useState(false);
@@ -33,7 +33,7 @@ const SignupForm = () => {
 
 	const handleSubmit = async () => {
 		try {
-			let request = {
+			const request = {
 				email: email,
 				username: username,
 				password: password,
@@ -43,10 +43,10 @@ const SignupForm = () => {
 			if (data.status == SUCCESS) {
 				redirect("/login");
 			} else {
-				setError("Error creating account!");
+				toast.error("Error creating account!");
 			}
 		} catch (e: any) {
-			setError(e.message);
+			toast.error(e.message);
 		}
 	};
 

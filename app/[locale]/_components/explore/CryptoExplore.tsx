@@ -10,14 +10,8 @@ import {
 } from "@/components/ui/table";
 import { Link } from "@/i18n/routing";
 import { formatMoney } from "@/lib/utils";
-import { Crypto, CryptoPriceHis } from "@/types/crypto.type";
-import {
-	ArrowDownRight,
-	ArrowUpRight,
-	Coins,
-	LineChart,
-	RefreshCw,
-} from "lucide-react";
+import { Crypto } from "@/types/crypto.type";
+import { ArrowDownRight, ArrowUpRight, Coins, RefreshCw } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 
@@ -86,7 +80,6 @@ const cryptoData: Crypto[] = [
 
 const CryptoExplore = () => {
 	const t = useTranslations("Explore");
-	const countRef = useRef(1);
 	return (
 		<div className="rounded-xl bg-white shadow-2xl transition-all hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
 			<div className="mb-4 flex items-center justify-between px-6 pt-6">
@@ -137,25 +130,25 @@ const CryptoExplore = () => {
 									{item.id}
 								</TableCell>
 								<TableCell>
-									<div className="flex items-center gap-4">
-										<div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-100 bg-white">
-											<img
-												src={item.imageUrl}
-												alt={item.name}
-												className="h-6 w-6 rounded-full object-cover"
-												onError={e => {
-													(e.target as HTMLImageElement).src =
-														"/fallback-crypto.png";
-												}}
-											/>
-										</div>
-										<div>
-											<div className="font-semibold text-gray-900">
-												{item.name}
+									<Link href={`/crypto/${item.id}`}>
+										<div className="flex items-center gap-4">
+											<div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-100 bg-white">
+												<img
+													src={item.imageUrl}
+													alt={item.name}
+													className="h-6 w-6 rounded-full object-cover"
+												/>
 											</div>
-											<div className="text-sm text-gray-500">{item.symbol}</div>
+											<div>
+												<div className="font-semibold text-gray-900">
+													{item.name}
+												</div>
+												<div className="text-sm text-gray-500">
+													{item.symbol}
+												</div>
+											</div>
 										</div>
-									</div>
+									</Link>
 								</TableCell>
 								<TableCell className="font-semibold text-blue-600">
 									{formatMoney(item.price.toString(), item.ccy)}

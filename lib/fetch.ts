@@ -1,4 +1,3 @@
-import { POST } from "@/app/constant/method";
 import { decryptData, encryptData } from "./decryption";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */

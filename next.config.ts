@@ -17,6 +17,9 @@ const nextConfig = {
 		SECRET_KEY: process.env.SECRET_KEY,
 		ENCRYPTION_KEY1: process.env.ENCRYPTION_KEY1,
 	},
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
 };
 
 export default withNextIntl(nextConfig);

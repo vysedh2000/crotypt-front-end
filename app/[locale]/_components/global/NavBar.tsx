@@ -22,6 +22,7 @@ const NavBar = () => {
 	useEffect(() => {
 		const fetchToken = async () => {
 			const token = (await getToken()) || "";
+			if (!token) return;
 			setUserData(decodejwt(token));
 		};
 		fetchToken();

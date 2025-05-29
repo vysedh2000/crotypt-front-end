@@ -19,7 +19,7 @@ export function encryptData(data: string): string {
 
 	let encrypted = cipher.update(data, "utf8", "base64");
 	encrypted += cipher.final("base64");
-	let encryptData = `${iv.toString("base64")}:${encrypted}`;
+	const encryptData = `${iv.toString("base64")}:${encrypted}`;
 
 	return hexa(encryptData);
 }

@@ -7,9 +7,8 @@ import {
 	SelectItem,
 	SelectLabel,
 	SelectTrigger,
-	SelectValue,
 } from "@/components/ui/select";
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { memo } from "react";
@@ -31,7 +30,6 @@ interface CountryDropdownProps {
 function SortedCountryDropdown({
 	value = "",
 	onChange,
-	showOfficialName = false,
 	className = "",
 	sortOrder = "asc",
 }: CountryDropdownProps) {
@@ -53,7 +51,7 @@ function SortedCountryDropdown({
 
 				if (!response.ok) throw new Error("Failed to fetch countries");
 
-				const data = await response.json();
+				const data: any = await response.json();
 
 				const processedCountries = data
 					.map((country: any) => ({

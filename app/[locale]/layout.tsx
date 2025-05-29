@@ -1,16 +1,28 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "@/app/[locale]/globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { Toaster } from "@/components/ui/sonner";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/700.css";
+import localFont from "next/font/local";
 
-const inter = Inter({
-	weight: ["400", "500", "600", "700"],
+const inter = localFont({
+	src: [
+		{
+			path: "./fonts/Inter-Regular.woff2",
+			weight: "400",
+			style: "normal",
+		},
+		{
+			path: "./fonts/Inter-Bold.woff2",
+			weight: "700",
+			style: "normal",
+		},
+	],
 	variable: "--font-inter",
-	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {

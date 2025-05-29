@@ -5,15 +5,13 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { AnimatedInput } from "./AnimatedInput";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { loginAction } from "./_action/auth";
 import { defaultResponse } from "@/app/types/default.type";
 import { SUCCESS } from "@/app/constant/status";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import Cookies from "js-cookie";
-import { decodejwt } from "@/util/jwtUtil";
 
 const LoginForm = () => {
 	const router = useRouter();

@@ -8,18 +8,9 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
-import { Link } from "@/i18n/routing";
 import { formatMoney } from "@/lib/utils";
-import { Crypto, CryptoPriceHis } from "@/types/crypto.type";
-import {
-	ArrowDownRight,
-	ArrowUpRight,
-	Coins,
-	LineChart,
-	RefreshCw,
-} from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Coins, RefreshCw } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useRef } from "react";
 
 const stockData: Stock[] = [
 	{
@@ -76,7 +67,6 @@ const stockData: Stock[] = [
 
 const StockExplore = () => {
 	const t = useTranslations("Explore");
-	const countRef = useRef(1);
 	return (
 		<div className="rounded-xl bg-white shadow-2xl transition-all hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
 			<div className="mb-4 flex items-center justify-between px-6 pt-6">

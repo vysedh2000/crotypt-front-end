@@ -12,7 +12,6 @@ const ExploreNavBar = () => {
 	const t = useTranslations("NavBar");
 	const [userData, setUserData] = useState<decodeToken>();
 	const [isDropdownOpen, setIsDropdown] = useState(false);
-	const [exploreDropdown, setExploreDropdown] = useState(false);
 	const [exploreTimeout, setExploreTimeout] = useState<NodeJS.Timeout | null>(
 		null
 	);
@@ -24,16 +23,6 @@ const ExploreNavBar = () => {
 		};
 		fetchToken();
 	}, []);
-
-	const handleExploreEnter = () => {
-		if (exploreTimeout) clearTimeout(exploreTimeout);
-		setExploreDropdown(true);
-	};
-
-	const handleExploreLeave = () => {
-		const timeout = setTimeout(() => setExploreDropdown(false), 100);
-		setExploreTimeout(timeout);
-	};
 
 	return (
 		<div className="flex flex-row justify-between items-center p-4 h-[60px] bg-white">

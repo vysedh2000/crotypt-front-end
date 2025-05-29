@@ -9,6 +9,4 @@ const config = {
 	},
 };
 
-// Works for both ESM and CJS
-module.exports = config;
 export default config;

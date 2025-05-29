@@ -12,7 +12,7 @@ export async function loginAction(data: any) {
 		(await cookies()).set("userToken", authData.data.userToken);
 		return authData;
 	} catch (e: any) {
-		throw new Error("Internal Server Error!");
+		throw new Error("Internal Server Error!", e.message);
 	}
 }
 
@@ -21,7 +21,7 @@ export async function signupAction(data: any) {
 		const res = await fetchData("/auth/signup", POST, data);
 		return res;
 	} catch (e: any) {
-		throw new Error("Internal Server Error!");
+		throw new Error("Internal Server Error!", e.message);
 	}
 }
 

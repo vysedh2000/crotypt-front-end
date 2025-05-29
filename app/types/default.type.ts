@@ -1,6 +1,6 @@
-export interface defaultResponse {
+export interface defaultResponse<T = any> {
 	status: string;
 	message: string;
 	code: string;
-	data: any;
+	data: T;
 }

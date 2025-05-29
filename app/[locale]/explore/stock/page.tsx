@@ -1,4 +1,3 @@
-import CryptoExplore from "../../_components/explore/CryptoExplore";
 import ExploreNavBar from "../../_components/explore/ExploreNavBar";
 import ExploreSideBar from "../../_components/explore/SideBar";
 import StockExplore from "../../_components/explore/StockExplore";

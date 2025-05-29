@@ -1,12 +1,5 @@
 import { Link } from "@/i18n/routing";
-import {
-	ArrowLeftRight,
-	Clock,
-	HomeIcon,
-	Search,
-	TimerIcon,
-	Wallet,
-} from "lucide-react";
+import { ArrowLeftRight, Clock, HomeIcon, Search, Wallet } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const ExploreSideBar = () => {

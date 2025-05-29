@@ -1,12 +1,6 @@
 import AuthNavBar from "../../_components/auth/AuthNavBar";
-import SortedCountryDropdown from "../../_components/auth/CountryDropdown";
 import { AuthLayout } from "../../_components/auth/layout";
 import SignupForm from "../../_components/auth/SignupForm";
-interface Country {
-	code: string;
-	commonName: string;
-	officialName: string;
-}
 
 const Page = () => {
 	return (
